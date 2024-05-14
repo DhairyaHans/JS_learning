@@ -3,6 +3,21 @@
 // 2. JS is LOOSELY TYPED (WEAKLY) language, as it allows implicit type conversion b/w
 //      unrelated datatypes.
 
+// Return type of variables in JavaScript
+// 1) Primitive Datatypes
+//        Number => number
+//        String  => string
+//        Boolean  => boolean
+//        null  => object
+//        undefined  =>  undefined
+//        Symbol  =>  symbol
+//        BigInt  =>  bigint
+
+// 2) Non-primitive Datatypes
+//        Arrays  =>  object
+//        Function  =>  function
+//        Object  =>  object
+
 // PRIMITIVE (CALL BY VALUE), i.e.,
 // Changes are made in the value only, not in the memory location
 
