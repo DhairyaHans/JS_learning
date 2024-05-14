@@ -31,11 +31,11 @@ let email;
 const id = Symbol("123");
 const anotherId = Symbol("123");
 
-console.log(id === anotherId);
+// console.log(id === anotherId);
 
 const bigNumber = 1234n;
 
-console.log(typeof bigNumber);
+// console.log(typeof bigNumber);
 
 // 7 Types -> String, Number, Boolean, null, Undefined, Symbol (dtype -> symbol), BigInt
 
@@ -57,4 +57,31 @@ const myFunction = function () {
 
 myFunction;
 
-console.log(typeof heros, typeof myObj, typeof myFunction);
+// console.log(typeof heros, typeof myObj, typeof myFunction);
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++
+// -- MEMORY IN JS --
+// 1. Stack -> Changes are made in copy, and not in the original variable (or location)
+//      Primitive DataTypes are stored in Stack
+// 2. Heap -> Changes are made in the original location, and the values are referenced.
+//      Non-Primitive DataTypes are stored in Heap
+
+let myGameId = "RiaalOp";
+let myAnotherGameId = myGameId;
+
+myAnotherGameId = "1Chance";
+
+console.log(myGameId);
+console.log(myAnotherGameId);
+
+let userOne = {
+  email: "user@gmail.com",
+  upi: "user@yll",
+};
+
+let userTwo = userOne;
+
+userTwo.email = "dhairya@gmail.com";
+
+console.log(userOne.email);
+console.log(userTwo.email);
