@@ -35,3 +35,5 @@ const url = "https://google.com/dhairya%20hans";
 // console.log(url.includes("hans"));
 
 console.log(gameName.split("-", 2));
+
+console.log(gameName.at(1));
