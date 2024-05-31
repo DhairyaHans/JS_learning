@@ -37,10 +37,22 @@ const obj4 = { 4: "x", 5: "b" };
 const obj3 = { ...obj1, ...obj2 };
 // console.log(obj3);
 
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+// console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+
+course = {
+  courseName: "JS in Hindi",
+  price: "999",
+  courseInstructor: "Hitesh",
+};
+
+// Object De-structuring
+const { courseInstructor: instructor } = course;
+
+// console.log(courseInstructor);
+console.log(instructor);
