@@ -32,4 +32,39 @@ function loggedInUser(username) {
 
 // console.log(loggedInUser("Dhairya"));
 
-console.log(loggedInUser());
+// console.log(loggedInUser());
+
+// REST OPERATOR ...
+// Here, ... represents Rest operator, which is used when we don't know how many arguments will be passed
+function calculateCartPrice(val1, val2, ...num1) {
+  return num1;
+}
+
+// console.log(calculateCartPrice(200, 240, 500, 2));
+
+const user = {
+  username: "Dhairya",
+  price: 199,
+};
+
+function handleObject(anyObject) {
+  console.log(
+    `Username is ${anyObject.username} and price is ${anyObject.price}`
+  );
+}
+
+// handleObject(user);
+// handleObject({
+//   username: "Lol",
+//   price: 500,
+// });
+
+const myArray = [2, 4, 5, 6, 7];
+
+function returnSecondValue(anyArray) {
+  return anyArray[1];
+}
+
+// console.log(returnSecondValue(myArray));
+
+console.log(returnSecondValue([3000, 9000, 2, 1, 33020]));
