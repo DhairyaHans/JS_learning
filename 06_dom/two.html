@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document Object Model</title>
+    <style>
+      .bg-black {
+        background-color: #212121;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <div>
+      <h1 id="title" class="heading">
+        DOM Learning on Chai aur
+        <span style="display: none">Test Text</span> Code
+      </h1>
+      <p><b>element.innerText</b> provides the text displayed on the screen</p>
+      <p><b>element.textContent</b> provides the text present in the tag</p>
+      <p><b>element.innerHTML</b> provides the HTML present in the tag</p>
+      <h2>
+        document.querySelector("h2") -> Gives the first element with h2 tag
+      </h2>
+      <h2>Even though there are more than one h2 elements</h2>
+      <h3>
+        querySelector() takes params as used in css selectors, like "#title" for
+        id and ".heading" for class
+      </h3>
+      <input
+        type="password"
+        name=""
+        id=""
+        placeholder="querySelector(Input[type='password'])"
+      />
+
+      <p>Change color of 1st element in UL</p>
+      <ul>
+        <li>const myUl = document.querySelector("ul")</li>
+        <li>const firstElement = myUl.querySelector("li")</li>
+        <li>firstElement.style.backgroundColor = "green"</li>
+      </ul>
+
+      <p>
+        NodeList and HTMLCollection are not same as normal Array<br />
+        getElementByClassName will provide HTMLCollection Need to convert it
+        to<br />
+        array to use a loop on it Using -> Array.from(list_items)<br />
+        convertedList.forEach( (item) => item.style.color = "orange")
+      </p>
+      <ul>
+        <li class="list-item">list-item one</li>
+        <li class="list-item">list-item two</li>
+        <li class="list-item">list-item three</li>
+        <li class="list-item">list-item four</li>
+      </ul>
+    </div>
+  </body>
+</html>
