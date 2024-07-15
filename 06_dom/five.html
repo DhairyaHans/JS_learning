@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chai Aur Code | DOM | Add/Edit/Remove a DOM ELEMENT</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <ul class="langs">
+      <li>Javascript</li>
+    </ul>
+  </body>
+  <script>
+    // ADD ELEMENT
+    function addLanguage(langName) {
+      const langElement = document.createElement("li");
+      // Traverses through the entire list and then appends
+      // the element at the last of the list
+      langElement.innerHTML = `${langName}`;
+      document.querySelector(".langs").appendChild(langElement);
+      // console.log(langElement);
+    }
+
+    addLanguage("Python");
+    addLanguage("Java");
+
+    function addOptiLanguage(langName) {
+      // It doesn't traverse the Entire tree and just appends the
+      // new element in the list
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector(".langs").appendChild(li);
+    }
+
+    addOptiLanguage("GoLang");
+
+    // EDIT ELEMENT
+
+    // Get the 2nd language
+    const secondLang = document.querySelector("li:nth-child(2)");
+    console.log(secondLang);
+
+    // Naive Approach
+    // secondLang.innerHTML = "Mojo";
+
+    // Optimized Approach
+    const newLi = document.createElement("li");
+    newLi.textContent = "Mojo";
+    secondLang.replaceWith(newLi);
+
+    // EDIT ELEMENT
+
+    // Get the 1st language
+    const firstLang = document.querySelector("li:first-child");
+    console.log(firstLang);
+    firstLang.outerHTML = "<li>Typescript</li>";
+
+    // REMOVE ELEMENT
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove();
+  </script>
+</html>
