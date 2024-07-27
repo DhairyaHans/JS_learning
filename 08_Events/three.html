@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Events setInterval, clearInterval</title>
+  </head>
+  <body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const showDate = function (str) {
+      console.log(str, "Dhairya", Date.now());
+    };
+    let interval = null;
+
+    document.querySelector("#start").addEventListener("click", function () {
+      interval = setInterval(showDate, 1000, "Hello");
+      console.log("START");
+    });
+
+    document.querySelector("#stop").addEventListener("click", function () {
+      if (interval) {
+        clearInterval(interval);
+      }
+      console.log("STOP");
+    });
+  </script>
+</html>

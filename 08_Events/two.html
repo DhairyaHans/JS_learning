@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Events setTimeout, clearTimeout</title>
+  </head>
+  <body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const logDhairya = function () {
+      console.log("Dhairya");
+    };
+
+    const changeText = function () {
+      document.querySelector("h1").innerHTML = "Js Series";
+    };
+
+    const changeMe = setTimeout(changeText, 2000);
+
+    // Stops the Timeout if we press the Stop button within 2 secs
+    document.querySelector("#stop").addEventListener("click", function () {
+      clearTimeout(changeMe);
+      console.log("Stopped");
+    });
+  </script>
+</html>
