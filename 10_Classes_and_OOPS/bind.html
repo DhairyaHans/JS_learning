@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React</title>
+  </head>
+  <body>
+    <button>Button Clicked</button>
+  </body>
+  <script>
+    class React {
+      constructor() {
+        this.library = "React";
+        this.server = "https://localhost:3000";
+
+        /*
+            Here, We can't access the class attributes like 
+            this.library or this.server, when the button is clicked 
+            bcoz... we are not passing the context to the handleClick 
+            ... If we use .call(), it will overwrite the context and
+            it will not understand... which button was clicked...
+
+            So, we need to use .bind(), so that when we click on the button
+            it will keep the current context and also get access to the class
+        */
+        // Taking reference of the Button
+        // And adding Click event tracker
+        document
+          .querySelector("button")
+          .addEventListener("click", this.handleClick.bind(this));
+      }
+
+      handleClick() {
+        console.log("Button Clicked");
+        console.log(this.server);
+      }
+
+      // Requirement
+      /*
+            Whenever the server runs(file runs), I need ->
+            1. A Reference of the button is taken, and an eventlistener to be applied
+                to the button, which logs something when it is clicked
+            2. An Object of the React Class is created
+
+        */
+    }
+
+    // Requirement 2. Implement
+    const app = new React();
+  </script>
+</html>
